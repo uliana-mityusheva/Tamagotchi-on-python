@@ -152,6 +152,6 @@ class Print:
 
     def died(self, name):
         print(name + " is died :(")
-        
+
     def help(self):
         print(self.__help)

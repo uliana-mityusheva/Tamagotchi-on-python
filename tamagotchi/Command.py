@@ -41,5 +41,3 @@ class Command:
             _print.error()
 
         return 'ok'
-
-

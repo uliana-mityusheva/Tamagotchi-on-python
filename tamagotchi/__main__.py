@@ -3,7 +3,6 @@ from tamagotchi import Print
 from tamagotchi import Command
 import time
 
-
 print_ = Print.Print()
 print_.hello()
 

@@ -203,4 +203,3 @@ class MyPet:
                 print_.tired(self.name)
 
         return "ok"
-
