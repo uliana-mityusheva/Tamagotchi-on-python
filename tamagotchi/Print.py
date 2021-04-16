@@ -11,6 +11,17 @@ class Print:
     __nine = "|*|*|*|*|*|*|*|*|*| |"
     __ten = "|*|*|*|*|*|*|*|*|*|*|"
 
+    __help = """You can use these commands to take care of your pet:
+- sleep
+- feed
+- sport
+- play
+- feed
+- toilet
+- treatment
+- parameters (to view all the pet's life parameters)
+- exit (to finish the game)"""
+
     def hello(self):
         print("Hello, let's start the game!\nCome up with a name for your pet")
 
@@ -86,7 +97,7 @@ class Print:
         print(name + " recovered")
 
     def end(self):
-        print("Thanks for playing")
+        print("Thanks for playing!")
 
     def sick(self, name):
         print(name + " is sick")
@@ -140,4 +151,7 @@ class Print:
         print(name + " played a puzzle")
 
     def died(self, name):
-        print(name + " is died")
+        print(name + " is died :(")
+        
+    def help(self):
+        print(self.__help)

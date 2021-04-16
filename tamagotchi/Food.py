@@ -117,7 +117,7 @@ class Hamburger(Food):
         return 5 * max_ // 10
 
     def need_go_toilet_change(self, min_, max_):
-        return 6 * max_ // 10
+        return 5 * max_ // 10
 
     def force_change(self, min_, max_):
         return 6 * max_ // 10

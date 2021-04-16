@@ -25,7 +25,7 @@ class Ball(Toy):
         return 4 * max_ // 10
 
     def force_change(self, min_, max_):
-        return -5 * max_ // 10
+        return -4 * max_ // 10
 
     def satiety_change(self, min_, max_):
         return -3 * max_ // 10
@@ -48,7 +48,7 @@ class ComputerGame(Toy):
         return -2 * max_ // 10
 
     def sleep_change(self, min_, max_):
-        return -4 * max_ // 10
+        return -3 * max_ // 10
 
     def healthy_change(self, min_, max_):
         return -2 * max_ // 10

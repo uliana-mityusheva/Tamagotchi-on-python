@@ -1,7 +1,7 @@
-import Command
-import Food
-import Print
-import Toy
+from tamagotchi import Command
+from tamagotchi import Food
+from tamagotchi import Print
+from tamagotchi import Toy
 
 
 class MyPet:
@@ -14,6 +14,8 @@ class MyPet:
     __force = __max_status
     __satiety = __max_status
     __happiness = __max_status
+
+    status = 'ok'
 
     def __check_status__(self, status):
         if status > self.__max_status:
@@ -167,13 +169,17 @@ class MyPet:
         print_ = Print.Print()
         print_.toilet(self.name)
 
-    def check_alive(self):
-        self.__happiness -= 1
-        self.__health -= 1
+    def check_alive(self, interval):
+        self.__happiness -= interval
+        self.__health -= interval
+        self.__satiety -= interval
+        self.__sleep -= interval
+        self.__need_toilet += interval
 
-        if self.__health == self.__min_status and self.__happiness == self.__min_status and \
-                self.__force == self.__min_status and self.__sleep == self.__min_status and \
-                self.__satiety == self.__min_status:
+    def check_status(self):
+        if self.__health == self.__min_status or self.__satiety == self.__min_status or \
+                (self.__happiness == self.__min_status and self.__force == self.__min_status and
+                 self.__sleep == self.__min_status):
             return "died"
         else:
             print_ = Print.Print()

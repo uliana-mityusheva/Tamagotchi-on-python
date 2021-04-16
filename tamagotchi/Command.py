@@ -1,4 +1,4 @@
-import Print
+from tamagotchi import Print
 
 
 class Command:
@@ -33,6 +33,9 @@ class Command:
             pet.go_toilet()
         elif command.lower() == "exit":
             return 'exit'
+        elif command.lower() == "help":
+            _print = Print.Print()
+            _print.help()
         else:
             _print = Print.Print()
             _print.error()
